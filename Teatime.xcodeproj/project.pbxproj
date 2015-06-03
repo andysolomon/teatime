@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		907B44931B1F3A6B00841988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B44921B1F3A6B00841988 /* AppDelegate.swift */; };
+		907B44951B1F3A6B00841988 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B44941B1F3A6B00841988 /* ViewController.swift */; };
+		907B44981B1F3A6B00841988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 907B44961B1F3A6B00841988 /* Main.storyboard */; };
+		907B449A1B1F3A6B00841988 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 907B44991B1F3A6B00841988 /* Images.xcassets */; };
+		907B449D1B1F3A6B00841988 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907B449B1B1F3A6B00841988 /* LaunchScreen.xib */; };
+		907B44A91B1F3A6B00841988 /* TeatimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B44A81B1F3A6B00841988 /* TeatimeTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		907B44A31B1F3A6B00841988 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 907B44851B1F3A6B00841988 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 907B448C1B1F3A6B00841988;
+			remoteInfo = Teatime;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		907B448D1B1F3A6B00841988 /* Teatime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teatime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		907B44911B1F3A6B00841988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		907B44921B1F3A6B00841988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		907B44941B1F3A6B00841988 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		907B44971B1F3A6B00841988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		907B44991B1F3A6B00841988 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		907B449C1B1F3A6B00841988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		907B44A21B1F3A6B00841988 /* TeatimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeatimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		907B44A71B1F3A6B00841988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		907B44A81B1F3A6B00841988 /* TeatimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeatimeTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		907B448A1B1F3A6B00841988 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		907B449F1B1F3A6B00841988 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		907B44841B1F3A6B00841988 = {
+			isa = PBXGroup;
+			children = (
+				907B448F1B1F3A6B00841988 /* Teatime */,
+				907B44A51B1F3A6B00841988 /* TeatimeTests */,
+				907B448E1B1F3A6B00841988 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		907B448E1B1F3A6B00841988 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				907B448D1B1F3A6B00841988 /* Teatime.app */,
+				907B44A21B1F3A6B00841988 /* TeatimeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		907B448F1B1F3A6B00841988 /* Teatime */ = {
+			isa = PBXGroup;
+			children = (
+				907B44921B1F3A6B00841988 /* AppDelegate.swift */,
+				907B44941B1F3A6B00841988 /* ViewController.swift */,
+				907B44961B1F3A6B00841988 /* Main.storyboard */,
+				907B44991B1F3A6B00841988 /* Images.xcassets */,
+				907B449B1B1F3A6B00841988 /* LaunchScreen.xib */,
+				907B44901B1F3A6B00841988 /* Supporting Files */,
+			);
+			path = Teatime;
+			sourceTree = "<group>";
+		};
+		907B44901B1F3A6B00841988 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				907B44911B1F3A6B00841988 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		907B44A51B1F3A6B00841988 /* TeatimeTests */ = {
+			isa = PBXGroup;
+			children = (
+				907B44A81B1F3A6B00841988 /* TeatimeTests.swift */,
+				907B44A61B1F3A6B00841988 /* Supporting Files */,
+			);
+			path = TeatimeTests;
+			sourceTree = "<group>";
+		};
+		907B44A61B1F3A6B00841988 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				907B44A71B1F3A6B00841988 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		907B448C1B1F3A6B00841988 /* Teatime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 907B44AC1B1F3A6B00841988 /* Build configuration list for PBXNativeTarget "Teatime" */;
+			buildPhases = (
+				907B44891B1F3A6B00841988 /* Sources */,
+				907B448A1B1F3A6B00841988 /* Frameworks */,
+				907B448B1B1F3A6B00841988 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Teatime;
+			productName = Teatime;
+			productReference = 907B448D1B1F3A6B00841988 /* Teatime.app */;
+			productType = "com.apple.product-type.application";
+		};
+		907B44A11B1F3A6B00841988 /* TeatimeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 907B44AF1B1F3A6B00841988 /* Build configuration list for PBXNativeTarget "TeatimeTests" */;
+			buildPhases = (
+				907B449E1B1F3A6B00841988 /* Sources */,
+				907B449F1B1F3A6B00841988 /* Frameworks */,
+				907B44A01B1F3A6B00841988 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				907B44A41B1F3A6B00841988 /* PBXTargetDependency */,
+			);
+			name = TeatimeTests;
+			productName = TeatimeTests;
+			productReference = 907B44A21B1F3A6B00841988 /* TeatimeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		907B44851B1F3A6B00841988 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = teateam;
+				TargetAttributes = {
+					907B448C1B1F3A6B00841988 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					907B44A11B1F3A6B00841988 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 907B448C1B1F3A6B00841988;
+					};
+				};
+			};
+			buildConfigurationList = 907B44881B1F3A6B00841988 /* Build configuration list for PBXProject "Teatime" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 907B44841B1F3A6B00841988;
+			productRefGroup = 907B448E1B1F3A6B00841988 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				907B448C1B1F3A6B00841988 /* Teatime */,
+				907B44A11B1F3A6B00841988 /* TeatimeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		907B448B1B1F3A6B00841988 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				907B44981B1F3A6B00841988 /* Main.storyboard in Resources */,
+				907B449D1B1F3A6B00841988 /* LaunchScreen.xib in Resources */,
+				907B449A1B1F3A6B00841988 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		907B44A01B1F3A6B00841988 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		907B44891B1F3A6B00841988 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				907B44951B1F3A6B00841988 /* ViewController.swift in Sources */,
+				907B44931B1F3A6B00841988 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		907B449E1B1F3A6B00841988 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				907B44A91B1F3A6B00841988 /* TeatimeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		907B44A41B1F3A6B00841988 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 907B448C1B1F3A6B00841988 /* Teatime */;
+			targetProxy = 907B44A31B1F3A6B00841988 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		907B44961B1F3A6B00841988 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				907B44971B1F3A6B00841988 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		907B449B1B1F3A6B00841988 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				907B449C1B1F3A6B00841988 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		907B44AA1B1F3A6B00841988 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		907B44AB1B1F3A6B00841988 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		907B44AD1B1F3A6B00841988 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Teatime/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		907B44AE1B1F3A6B00841988 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Teatime/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		907B44B01B1F3A6B00841988 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TeatimeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Teatime.app/Teatime";
+			};
+			name = Debug;
+		};
+		907B44B11B1F3A6B00841988 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TeatimeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Teatime.app/Teatime";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		907B44881B1F3A6B00841988 /* Build configuration list for PBXProject "Teatime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				907B44AA1B1F3A6B00841988 /* Debug */,
+				907B44AB1B1F3A6B00841988 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		907B44AC1B1F3A6B00841988 /* Build configuration list for PBXNativeTarget "Teatime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				907B44AD1B1F3A6B00841988 /* Debug */,
+				907B44AE1B1F3A6B00841988 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		907B44AF1B1F3A6B00841988 /* Build configuration list for PBXNativeTarget "TeatimeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				907B44B01B1F3A6B00841988 /* Debug */,
+				907B44B11B1F3A6B00841988 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 907B44851B1F3A6B00841988 /* Project object */;
+}
