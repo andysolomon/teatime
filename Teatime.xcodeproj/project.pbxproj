@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		907B44931B1F3A6B00841988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B44921B1F3A6B00841988 /* AppDelegate.swift */; };
-		907B44951B1F3A6B00841988 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B44941B1F3A6B00841988 /* ViewController.swift */; };
 		907B44981B1F3A6B00841988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 907B44961B1F3A6B00841988 /* Main.storyboard */; };
 		907B449A1B1F3A6B00841988 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 907B44991B1F3A6B00841988 /* Images.xcassets */; };
 		907B449D1B1F3A6B00841988 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907B449B1B1F3A6B00841988 /* LaunchScreen.xib */; };
 		907B44A91B1F3A6B00841988 /* TeatimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B44A81B1F3A6B00841988 /* TeatimeTests.swift */; };
+		907B44B31B1FA79400841988 /* TeaListTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B44B21B1FA79400841988 /* TeaListTableTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 		907B448D1B1F3A6B00841988 /* Teatime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teatime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		907B44911B1F3A6B00841988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		907B44921B1F3A6B00841988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		907B44941B1F3A6B00841988 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		907B44971B1F3A6B00841988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		907B44991B1F3A6B00841988 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		907B449C1B1F3A6B00841988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		907B44A21B1F3A6B00841988 /* TeatimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeatimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		907B44A71B1F3A6B00841988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		907B44A81B1F3A6B00841988 /* TeatimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeatimeTests.swift; sourceTree = "<group>"; };
+		907B44B21B1FA79400841988 /* TeaListTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaListTableTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				907B44921B1F3A6B00841988 /* AppDelegate.swift */,
-				907B44941B1F3A6B00841988 /* ViewController.swift */,
+				907B44B21B1FA79400841988 /* TeaListTableTableViewController.swift */,
 				907B44961B1F3A6B00841988 /* Main.storyboard */,
 				907B44991B1F3A6B00841988 /* Images.xcassets */,
 				907B449B1B1F3A6B00841988 /* LaunchScreen.xib */,
@@ -212,8 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				907B44951B1F3A6B00841988 /* ViewController.swift in Sources */,
 				907B44931B1F3A6B00841988 /* AppDelegate.swift in Sources */,
+				907B44B31B1FA79400841988 /* TeaListTableTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
