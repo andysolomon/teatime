@@ -19,8 +19,10 @@ class TeaListTableTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("TeaCell") as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("TeaCell") as! TeaListTableViewCell
         
+        cell.teaTypeIcon.image = UIImage(named: "icon-black")
+        cell.teaLabel.text = "Boba Guys Blend No. 1"
         return cell
     }
     
