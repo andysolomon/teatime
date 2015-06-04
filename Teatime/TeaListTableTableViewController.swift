@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TeaListTableTableViewController: UITableViewController {
+class TeaListTableTableViewController: UITableViewController, TeaListTableViewCellDelegate {
 
     @IBOutlet var addButtonDidPress: UIBarButtonItem!
     
@@ -23,7 +23,14 @@ class TeaListTableTableViewController: UITableViewController {
         
         cell.teaTypeIcon.image = UIImage(named: "icon-black")
         cell.teaLabel.text = "Boba Guys Blend No. 1"
+        cell.delegate = self
         return cell
+    }
+    
+    // MARK:
+    func tableViewCellDidSelect(cell: TeaListTableViewCell, sender: AnyObject) {
+        // TODO: Implement a way to navigate to the next screen.
+        // performSegueWithIdentifier(teaBriefScreen, sender: self)
     }
     
 //    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
