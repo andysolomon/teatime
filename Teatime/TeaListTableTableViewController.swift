@@ -8,22 +8,45 @@
 
 import UIKit
 
-class TeaListTableTableViewController: UITableViewController, TeaListTableViewCellDelegate {
+class TeaListTableTableViewController: UITableViewController {
 
     @IBOutlet var addButtonDidPress: UIBarButtonItem!
     
     @IBOutlet var bankButtonDidPress: UIBarButtonItem!
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return data.count
     }
     
+    func getIconType(icon: String) -> String? {
+        switch icon {
+        case "Black":
+            return "black"
+        case "Green":
+            return "green"
+        case "Puerh":
+            return "puerh"
+        case "Oolong":
+            return "oolong"
+        case "White":
+            return "white"
+        case "Herbal":
+            return "herbal"
+        default:
+            return ""
+        }
+        
+    }
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TeaCell") as! TeaListTableViewCell
         
-        cell.teaTypeIcon.image = UIImage(named: "icon-black")
-        cell.teaLabel.text = "Boba Guys Blend No. 1"
-        cell.delegate = self
+        let tea = data[indexPath.row]
+        let teaName = tea["name"] as? String
+        let teaIcon = getIconType(tea["type"] as! String!)
+        cell.teaTypeIcon.image = UIImage(named: "icon-" + teaIcon! )
+        cell.teaLabel.text = teaName
+        //cell.delegate = self
         return cell
     }
     
@@ -33,7 +56,4 @@ class TeaListTableTableViewController: UITableViewController, TeaListTableViewCe
         // performSegueWithIdentifier(teaBriefScreen, sender: self)
     }
     
-//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        return 1
-//    }
 }

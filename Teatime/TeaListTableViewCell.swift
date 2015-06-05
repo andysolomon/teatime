@@ -20,5 +20,6 @@ class TeaListTableViewCell: UITableViewCell {
     
     weak var delegate: TeaListTableViewCellDelegate?
     
-    delegate?.tableViewCellDidSelect(self, sender: sender)
+    //delegate?.tableViewCellDidSelect(self, sender: sender)
+    //delegate?.storyTableViewCellDidTouchComment(self, sender: sender)
 }
