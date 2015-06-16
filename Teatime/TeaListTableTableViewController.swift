@@ -30,7 +30,7 @@ class TeaListTableTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("StepsSegue", sender: self)
+        //performSegueWithIdentifier("stepStoneSegue", sender: self)
     }
     
     // MARK:

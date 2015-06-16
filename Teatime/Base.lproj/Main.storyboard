@@ -22,11 +22,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeaCell" rowHeight="44" id="3U4-Og-O17" customClass="TeaListTableViewCell" customModule="Teatime" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TeaCell" rowHeight="44" id="3U4-Og-O17" customClass="TeaListTableViewCell" customModule="Teatime" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3U4-Og-O17" id="Ohi-bN-Lsg">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y2y-Oq-8q5">
@@ -37,7 +37,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16K-rh-Hbz">
-                                            <rect key="frame" x="48" y="13" width="512" height="20"/>
+                                            <rect key="frame" x="48" y="13" width="479" height="20"/>
                                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -62,6 +62,7 @@
                                 <connections>
                                     <outlet property="teaLabel" destination="16K-rh-Hbz" id="uQS-qz-5io"/>
                                     <outlet property="teaTypeIcon" destination="y2y-Oq-8q5" id="AzZ-PY-c7e"/>
+                                    <segue destination="sPP-lV-9zW" kind="show" identifier="stepStoneSegue" id="OHX-oL-Up9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -76,85 +77,63 @@
                             <color key="tintColor" red="0.019474377855658531" green="0.023402698338031769" blue="0.031733173877000809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="D6Q-HZ-yXK" kind="show" identifier="StepsSegue" id="c2Z-QT-b66"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fzn-bv-meq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="864" y="418"/>
         </scene>
-        <!--Steps-->
-        <scene sceneID="Rlv-K1-gYD">
+        <!--Step Stone View Controller-->
+        <scene sceneID="rRK-Wk-U00">
             <objects>
-                <viewController title="Steps" id="D6Q-HZ-yXK" customClass="StepsViewController" sceneMemberID="viewController">
+                <viewController id="sPP-lV-9zW" customClass="StepStoneViewController" customModule="Teatime" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5WS-cp-O48"/>
-                        <viewControllerLayoutGuide type="bottom" id="yE3-pd-P2p"/>
+                        <viewControllerLayoutGuide type="top" id="wCt-tK-feX"/>
+                        <viewControllerLayoutGuide type="bottom" id="pLg-e4-NNn"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KeZ-q8-P3t">
+                    <view key="view" contentMode="scaleToFill" id="0Q9-fa-oaU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pria's Puerh" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91e-ZU-Egj">
-                                <rect key="frame" x="140" y="72" width="320" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="bEi-D8-4yM"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="48"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9S-pj-lQk">
+                                <rect key="frame" x="253" y="96" width="95" height="42"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXr-Hd-NHH">
-                                <rect key="frame" x="563" y="577" width="29" height="17"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXx-2w-afO">
-                                <rect key="frame" x="278" y="220" width="44" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVA-5l-Fr6">
-                                <rect key="frame" x="285" y="329" width="36" height="30"/>
-                                <state key="normal" title="Brew">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="brewButton:" destination="D6Q-HZ-yXK" eventType="touchUpInside" id="Con-Vo-GnE"/>
-                                </connections>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuE-dj-U9B">
+                                <rect key="frame" x="277" y="285" width="35" height="30"/>
+                                <state key="normal" title="Brew"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkD-rv-CVG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="632-EH-PKo">
                                 <rect key="frame" x="8" y="571" width="49" height="29"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                 <state key="normal" title="Restart">
                                     <color key="titleColor" red="0.019474377855658531" green="0.023402698338031769" blue="0.031733173877000809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2Q-v3-zzh">
+                                <rect key="frame" x="563.5" y="577.5" width="28.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yE3-pd-P2p" firstAttribute="top" secondItem="OXr-Hd-NHH" secondAttribute="bottom" constant="6" id="0fu-kx-KR1"/>
-                            <constraint firstAttribute="centerX" secondItem="91e-ZU-Egj" secondAttribute="centerX" id="5k8-e3-oyb"/>
-                            <constraint firstItem="yE3-pd-P2p" firstAttribute="top" secondItem="xkD-rv-CVG" secondAttribute="bottom" id="CVm-rl-nxI"/>
-                            <constraint firstItem="91e-ZU-Egj" firstAttribute="top" secondItem="KeZ-q8-P3t" secondAttribute="top" id="MFv-Hn-1Pn"/>
-                            <constraint firstItem="91e-ZU-Egj" firstAttribute="top" secondItem="5WS-cp-O48" secondAttribute="bottom" constant="8" id="MZj-8p-fyu"/>
-                            <constraint firstAttribute="trailing" secondItem="OXr-Hd-NHH" secondAttribute="trailing" constant="8" id="oUj-Fn-FyB"/>
-                            <constraint firstItem="xkD-rv-CVG" firstAttribute="leading" secondItem="KeZ-q8-P3t" secondAttribute="leading" constant="8" id="sgv-BO-Mi0"/>
+                            <constraint firstItem="pLg-e4-NNn" firstAttribute="top" secondItem="632-EH-PKo" secondAttribute="bottom" id="7Lz-0b-D7i"/>
+                            <constraint firstItem="632-EH-PKo" firstAttribute="leading" secondItem="0Q9-fa-oaU" secondAttribute="leading" constant="8" id="Gpl-Ej-3sC"/>
+                            <constraint firstItem="pLg-e4-NNn" firstAttribute="top" secondItem="t2Q-v3-zzh" secondAttribute="bottom" constant="6" id="guS-OW-6aw"/>
+                            <constraint firstAttribute="trailing" secondItem="t2Q-v3-zzh" secondAttribute="trailing" constant="8" id="q8u-3e-Bpp"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="MFv-Hn-1Pn"/>
-                            </mask>
-                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="2ih-DW-HlY"/>
+                    <connections>
+                        <outlet property="stepNameLabel" destination="m9S-pj-lQk" id="VeA-9H-JKc"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8RT-Eb-nFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P9b-qY-6LP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1640" y="418"/>
+            <point key="canvasLocation" x="1590" y="418"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KM3-sg-9Vb">

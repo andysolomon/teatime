@@ -15,7 +15,7 @@
 		907B44B31B1FA79400841988 /* TeaListTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B44B21B1FA79400841988 /* TeaListTableTableViewController.swift */; };
 		907B44B51B1FC8CA00841988 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B44B41B1FC8CA00841988 /* RecipeData.swift */; };
 		907B44B71B1FD64300841988 /* TeaListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B44B61B1FD64300841988 /* TeaListTableViewCell.swift */; };
-		90F0194C1B2E6D2500E02292 /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F0194B1B2E6D2500E02292 /* StepsViewController.swift */; };
+		90BA13611B30766A001636AA /* StepStoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BA13601B30766A001636AA /* StepStoneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 		907B44B21B1FA79400841988 /* TeaListTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaListTableTableViewController.swift; sourceTree = "<group>"; };
 		907B44B41B1FC8CA00841988 /* RecipeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
 		907B44B61B1FD64300841988 /* TeaListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaListTableViewCell.swift; sourceTree = "<group>"; };
-		90F0194B1B2E6D2500E02292 /* StepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
+		90BA13601B30766A001636AA /* StepStoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepStoneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,7 @@
 				907B44B41B1FC8CA00841988 /* RecipeData.swift */,
 				907B44B21B1FA79400841988 /* TeaListTableTableViewController.swift */,
 				907B44B61B1FD64300841988 /* TeaListTableViewCell.swift */,
-				90F0194B1B2E6D2500E02292 /* StepsViewController.swift */,
+				90BA13601B30766A001636AA /* StepStoneViewController.swift */,
 				907B44961B1F3A6B00841988 /* Main.storyboard */,
 				9076AE671B24F72F0070A488 /* Images.xcassets */,
 				907B44901B1F3A6B00841988 /* Supporting Files */,
@@ -222,11 +222,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90BA13611B30766A001636AA /* StepStoneViewController.swift in Sources */,
 				907B44B51B1FC8CA00841988 /* RecipeData.swift in Sources */,
 				907B44B71B1FD64300841988 /* TeaListTableViewCell.swift in Sources */,
 				907B44B31B1FA79400841988 /* TeaListTableTableViewController.swift in Sources */,
 				900201DE1B30354F00FCCC0F /* AppDelegate.swift in Sources */,
-				90F0194C1B2E6D2500E02292 /* StepsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
