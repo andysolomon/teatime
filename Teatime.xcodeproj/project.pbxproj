@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		907B44931B1F3A6B00841988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B44921B1F3A6B00841988 /* AppDelegate.swift */; };
+		900201DE1B30354F00FCCC0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900201DD1B30354F00FCCC0F /* AppDelegate.swift */; };
+		9076AE681B24F72F0070A488 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9076AE671B24F72F0070A488 /* Images.xcassets */; };
 		907B44981B1F3A6B00841988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 907B44961B1F3A6B00841988 /* Main.storyboard */; };
 		907B449D1B1F3A6B00841988 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907B449B1B1F3A6B00841988 /* LaunchScreen.xib */; };
 		907B44A91B1F3A6B00841988 /* TeatimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B44A81B1F3A6B00841988 /* TeatimeTests.swift */; };
 		907B44B31B1FA79400841988 /* TeaListTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B44B21B1FA79400841988 /* TeaListTableTableViewController.swift */; };
 		907B44B51B1FC8CA00841988 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B44B41B1FC8CA00841988 /* RecipeData.swift */; };
 		907B44B71B1FD64300841988 /* TeaListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B44B61B1FD64300841988 /* TeaListTableViewCell.swift */; };
-		907B44B91B1FDE0700841988 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 907B44B81B1FDE0700841988 /* Images.xcassets */; };
+		90F0194C1B2E6D2500E02292 /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F0194B1B2E6D2500E02292 /* StepsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,9 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		900201DD1B30354F00FCCC0F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../.Trash/AppDelegate.swift; sourceTree = "<group>"; };
+		9076AE671B24F72F0070A488 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		907B448D1B1F3A6B00841988 /* Teatime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teatime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		907B44911B1F3A6B00841988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		907B44921B1F3A6B00841988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		907B44971B1F3A6B00841988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		907B449C1B1F3A6B00841988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		907B44A21B1F3A6B00841988 /* TeatimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeatimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,7 +41,7 @@
 		907B44B21B1FA79400841988 /* TeaListTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaListTableTableViewController.swift; sourceTree = "<group>"; };
 		907B44B41B1FC8CA00841988 /* RecipeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
 		907B44B61B1FD64300841988 /* TeaListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaListTableViewCell.swift; sourceTree = "<group>"; };
-		907B44B81B1FDE0700841988 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../../.Trash/Images.xcassets; sourceTree = "<group>"; };
+		90F0194B1B2E6D2500E02292 /* StepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +83,12 @@
 		907B448F1B1F3A6B00841988 /* Teatime */ = {
 			isa = PBXGroup;
 			children = (
-				907B44921B1F3A6B00841988 /* AppDelegate.swift */,
 				907B44B41B1FC8CA00841988 /* RecipeData.swift */,
 				907B44B21B1FA79400841988 /* TeaListTableTableViewController.swift */,
 				907B44B61B1FD64300841988 /* TeaListTableViewCell.swift */,
+				90F0194B1B2E6D2500E02292 /* StepsViewController.swift */,
 				907B44961B1F3A6B00841988 /* Main.storyboard */,
-				907B44B81B1FDE0700841988 /* Images.xcassets */,
-				907B449B1B1F3A6B00841988 /* LaunchScreen.xib */,
+				9076AE671B24F72F0070A488 /* Images.xcassets */,
 				907B44901B1F3A6B00841988 /* Supporting Files */,
 			);
 			path = Teatime;
@@ -96,6 +97,8 @@
 		907B44901B1F3A6B00841988 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				900201DD1B30354F00FCCC0F /* AppDelegate.swift */,
+				907B449B1B1F3A6B00841988 /* LaunchScreen.xib */,
 				907B44911B1F3A6B00841988 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -162,7 +165,8 @@
 		907B44851B1F3A6B00841988 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = teateam;
 				TargetAttributes = {
 					907B448C1B1F3A6B00841988 = {
@@ -198,7 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				907B44B91B1FDE0700841988 /* Images.xcassets in Resources */,
+				9076AE681B24F72F0070A488 /* Images.xcassets in Resources */,
 				907B44981B1F3A6B00841988 /* Main.storyboard in Resources */,
 				907B449D1B1F3A6B00841988 /* LaunchScreen.xib in Resources */,
 			);
@@ -219,9 +223,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				907B44B51B1FC8CA00841988 /* RecipeData.swift in Sources */,
-				907B44931B1F3A6B00841988 /* AppDelegate.swift in Sources */,
 				907B44B71B1FD64300841988 /* TeaListTableViewCell.swift in Sources */,
 				907B44B31B1FA79400841988 /* TeaListTableTableViewController.swift in Sources */,
+				900201DE1B30354F00FCCC0F /* AppDelegate.swift in Sources */,
+				90F0194C1B2E6D2500E02292 /* StepsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +289,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -352,6 +358,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Teatime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.teateam.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -362,6 +369,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Teatime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.teateam.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -380,6 +388,7 @@
 				);
 				INFOPLIST_FILE = TeatimeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.teateam.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Teatime.app/Teatime";
 			};
@@ -395,6 +404,7 @@
 				);
 				INFOPLIST_FILE = TeatimeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.teateam.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Teatime.app/Teatime";
 			};

@@ -18,7 +18,7 @@ class TeaListTableViewCell: UITableViewCell {
 
     @IBOutlet var teaLabel: UILabel!
     
-    weak var delegate: TeaListTableViewCellDelegate?
+    //weak var delegate: TeaListTableViewCellDelegate?
     
     //delegate?.tableViewCellDidSelect(self, sender: sender)
     //delegate?.storyTableViewCellDidTouchComment(self, sender: sender)

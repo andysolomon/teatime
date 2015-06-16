@@ -8,7 +8,7 @@
 
 import Foundation
 
-var data: [[String:AnyObject]] = [
+let RecipeData: [[String:AnyObject]] = [
     [   "type": "Green",
         "category": "Jasmine",
         "name": "Johhny's Jazz",
@@ -35,6 +35,22 @@ var data: [[String:AnyObject]] = [
     ]
     
 ]
-class RecipeData {
 
+func getIconType(icon: String) -> String? {
+    switch icon {
+    case "Black":
+        return "black"
+    case "Green":
+        return "green"
+    case "Puerh":
+        return "puerh"
+    case "Oolong":
+        return "oolong"
+    case "White":
+        return "white"
+    case "Herbal":
+        return "herbal"
+    default:
+        return ""
+    }
 }
