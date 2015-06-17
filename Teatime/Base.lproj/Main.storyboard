@@ -10,6 +10,7 @@
             <string>Helvetica-Bold</string>
             <string>Helvetica-Bold</string>
             <string>Helvetica-Bold</string>
+            <string>Helvetica</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -94,46 +95,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9S-pj-lQk">
-                                <rect key="frame" x="253" y="96" width="95" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boba Guys Blend No. 1" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m9S-pj-lQk">
+                                <rect key="frame" x="101" y="74" width="398.5" height="41.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="J5G-kM-prn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="J5G-kM-prn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="J5G-kM-prn"/>
+                                    </mask>
+                                </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuE-dj-U9B">
-                                <rect key="frame" x="277" y="285" width="35" height="30"/>
-                                <state key="normal" title="Brew"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="632-EH-PKo">
                                 <rect key="frame" x="8" y="571" width="49" height="29"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                 <state key="normal" title="Restart">
                                     <color key="titleColor" red="0.019474377855658531" green="0.023402698338031769" blue="0.031733173877000809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="restartTimer:" destination="sPP-lV-9zW" eventType="touchUpInside" id="hhf-Gh-OnP"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2Q-v3-zzh">
-                                <rect key="frame" x="563.5" y="577.5" width="28.5" height="16.5"/>
+                                <rect key="frame" x="563" y="577" width="28.5" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvP-yR-tOf">
+                                <rect key="frame" x="290" y="279" width="20.5" height="41.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuE-dj-U9B">
+                                <rect key="frame" x="283" y="470" width="35" height="30"/>
+                                <state key="normal" title="Brew"/>
+                                <connections>
+                                    <action selector="toggleTimerStart:" destination="sPP-lV-9zW" eventType="touchUpInside" id="2tF-e4-2ZZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pLg-e4-NNn" firstAttribute="top" secondItem="632-EH-PKo" secondAttribute="bottom" id="7Lz-0b-D7i"/>
+                            <constraint firstItem="pLg-e4-NNn" firstAttribute="top" secondItem="QuE-dj-U9B" secondAttribute="bottom" constant="100" id="FnM-fy-8m7"/>
                             <constraint firstItem="632-EH-PKo" firstAttribute="leading" secondItem="0Q9-fa-oaU" secondAttribute="leading" constant="8" id="Gpl-Ej-3sC"/>
+                            <constraint firstItem="m9S-pj-lQk" firstAttribute="centerX" secondItem="0Q9-fa-oaU" secondAttribute="centerX" id="Kfn-Ha-JRj"/>
+                            <constraint firstItem="fvP-yR-tOf" firstAttribute="centerY" secondItem="0Q9-fa-oaU" secondAttribute="centerY" id="PXe-x2-Vi0"/>
+                            <constraint firstItem="m9S-pj-lQk" firstAttribute="top" secondItem="wCt-tK-feX" secondAttribute="bottom" constant="10" id="Wi0-gf-Yd0"/>
+                            <constraint firstItem="QuE-dj-U9B" firstAttribute="centerX" secondItem="0Q9-fa-oaU" secondAttribute="centerX" id="baU-ei-oh0"/>
                             <constraint firstItem="pLg-e4-NNn" firstAttribute="top" secondItem="t2Q-v3-zzh" secondAttribute="bottom" constant="6" id="guS-OW-6aw"/>
+                            <constraint firstItem="QuE-dj-U9B" firstAttribute="centerY" secondItem="0Q9-fa-oaU" secondAttribute="centerY" id="oDj-Ge-vhx"/>
                             <constraint firstAttribute="trailing" secondItem="t2Q-v3-zzh" secondAttribute="trailing" constant="8" id="q8u-3e-Bpp"/>
+                            <constraint firstItem="fvP-yR-tOf" firstAttribute="centerX" secondItem="0Q9-fa-oaU" secondAttribute="centerX" id="xBl-Ic-ith"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="oDj-Ge-vhx"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="2ih-DW-HlY"/>
                     <connections>
                         <outlet property="stepNameLabel" destination="m9S-pj-lQk" id="VeA-9H-JKc"/>
+                        <outlet property="stepTimerLabel" destination="fvP-yR-tOf" id="pGS-5v-Xb0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9b-qY-6LP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1590" y="418"/>
+            <point key="canvasLocation" x="1675" y="496"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KM3-sg-9Vb">
