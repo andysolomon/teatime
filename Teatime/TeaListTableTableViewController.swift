@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TeaListTableTableViewController: UITableViewController {
+class TeaListTableTableViewController: UITableViewController, TeaListTableViewCellDelegate {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return RecipeData.count
@@ -16,17 +16,15 @@ class TeaListTableTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let data = RecipeData[indexPath.row]
+        
         let dequeued: AnyObject = tableView.dequeueReusableCellWithIdentifier("TeaCell", forIndexPath: indexPath)
+        let cell = dequeued as! TeaListTableViewCell
+        let tea = RecipeData[indexPath.row]
         
-        let cell = dequeued as? TeaListTableViewCell
+        cell.configureWithTea(tea)
         
-        let teaName = data["name"] as? String
-        let teaIcon = getIconType(data["type"] as! String)
-        
-        cell?.teaTypeIcon.image = UIImage(named: "icon-" + teaIcon! )
-        cell?.teaLabel.text = teaName
-        return cell!
+        cell.delegate = self
+        return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -34,9 +32,17 @@ class TeaListTableTableViewController: UITableViewController {
     }
     
     // MARK:
-    func tableViewCellDidSelect(cell: TeaListTableViewCell, sender: AnyObject) {
-        // TODO: Implement a way to navigate to the next screen.
-        // performSegueWithIdentifier(teaBriefScreen, sender: self)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "stepStoneSegue" {
+            let toView = segue.destinationViewController as? StepStoneViewController
+            let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)!
+            let tea = RecipeData[indexPath.row]
+            toView!.tea = tea
+        }
+    }
+    // MARK: Misc
+    func teaListTableViewCellDidTouchTeaCell(cell: TeaListTableViewCell, sender: AnyObject) {
+        performSegueWithIdentifier("stepStoneSegue", sender: self)
     }
     
 }

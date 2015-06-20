@@ -8,8 +8,9 @@
 
 import Foundation
 
-let RecipeData: [[String:AnyObject]] = [
-    [   "type": "Green",
+let RecipeData: JSON = [
+    [
+        "type": "Green",
         "category": "Jasmine",
         "name": "Johhny's Jazz",
         "steps": 4,
@@ -17,23 +18,86 @@ let RecipeData: [[String:AnyObject]] = [
         "reviews": "Love this place",
         "creator": "John Jackson"
     ],
-    [   "type": "Black",
+    [
+        "type": "Black",
         "category": "Boba Guys Blend No. 1",
         "name": "Boba Guys Blend No. 1",
-        "steps": 4,
+        "steps": [
+            [
+                "stepName": "Add Tea Leaves",
+                "instructions": "Add 1tsp of tea",
+                "duration": "300",
+                "id": "1001"
+            ],
+            [
+                "stepName": "Pour Water",
+                "instructions": "Pour water into brewer and lid",
+                "duration": "300",
+                "id": "1002"
+            ],
+            [
+                "stepName": "Boil Water",
+                "instructions": "Bring the water to 200F",
+                "duration": "500",
+                "id": "1003"
+            ],
+            [
+                "stepName": "Let Steep",
+                "instructions": "Give the tea sometime to steep properly",
+                "duration": "900",
+                "id": "1004"
+            ],
+            [
+                "stepName": "Pour Tea",
+                "instructions": "Make sure to decant excess liquid to prevent tea from over steeping.",
+                "duration": "10",
+                "id": "1005"
+            ]
+        ],
         "numOfReviews": 4,
         "reviews": "Love this place",
         "creator": "John Jackson"
     ],
-    [   "type": "Herbal",
+    [
+        "type": "Herbal",
         "category": "Chamomile",
         "name": "Henry's Chamo",
-        "steps": 4,
+        "steps": [
+            [
+                "stepName": "Slowly Add Tea Leaves",
+                "instructions": "Add 1tsp of tea",
+                "duration": "300",
+                "id": "1001"
+            ],
+            [
+                "stepName": "Pour Water",
+                "instructions": "Pour water into brewer and lid",
+                "duration": "300",
+                "id": "1002"
+            ],
+            [
+                "stepName": "Boil Water",
+                "instructions": "Bring the water to 200F",
+                "duration": "500",
+                "id": "1003"
+            ],
+            [
+                "stepName": "Let Steep",
+                "instructions": "Give the tea sometime to steep properly",
+                "duration": "900",
+                "id": "1004"
+            ],
+            [
+                "stepName": "Pour Tea",
+                "instructions": "Make sure to decant excess liquid to prevent tea from over steeping.",
+                "duration": "10",
+                "id": "1005"
+            ]
+        ],
         "numOfReviews": 4,
         "reviews": "Love this place",
         "creator": "Henry Harrison"
     ]
-    
 ]
 
 func getIconType(icon: String) -> String? {

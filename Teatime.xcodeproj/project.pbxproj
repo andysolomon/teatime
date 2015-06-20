@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		900201DE1B30354F00FCCC0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900201DD1B30354F00FCCC0F /* AppDelegate.swift */; };
+		905295441B32481D00523CBB /* TeaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905295431B32481D00523CBB /* TeaData.swift */; };
 		9076AE681B24F72F0070A488 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9076AE671B24F72F0070A488 /* Images.xcassets */; };
 		907B44981B1F3A6B00841988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 907B44961B1F3A6B00841988 /* Main.storyboard */; };
 		907B449D1B1F3A6B00841988 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907B449B1B1F3A6B00841988 /* LaunchScreen.xib */; };
@@ -15,6 +16,7 @@
 		907B44B31B1FA79400841988 /* TeaListTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B44B21B1FA79400841988 /* TeaListTableTableViewController.swift */; };
 		907B44B51B1FC8CA00841988 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B44B41B1FC8CA00841988 /* RecipeData.swift */; };
 		907B44B71B1FD64300841988 /* TeaListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B44B61B1FD64300841988 /* TeaListTableViewCell.swift */; };
+		908BC1A71B3534E4000B8797 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908BC1A61B3534E4000B8797 /* SwiftyJSON.swift */; };
 		90BA13611B30766A001636AA /* StepStoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BA13601B30766A001636AA /* StepStoneViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		900201DD1B30354F00FCCC0F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../.Trash/AppDelegate.swift; sourceTree = "<group>"; };
+		905295431B32481D00523CBB /* TeaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaData.swift; sourceTree = "<group>"; };
 		9076AE671B24F72F0070A488 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		907B448D1B1F3A6B00841988 /* Teatime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teatime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		907B44911B1F3A6B00841988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +44,7 @@
 		907B44B21B1FA79400841988 /* TeaListTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaListTableTableViewController.swift; sourceTree = "<group>"; };
 		907B44B41B1FC8CA00841988 /* RecipeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
 		907B44B61B1FD64300841988 /* TeaListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeaListTableViewCell.swift; sourceTree = "<group>"; };
+		908BC1A61B3534E4000B8797 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		90BA13601B30766A001636AA /* StepStoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepStoneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +87,9 @@
 		907B448F1B1F3A6B00841988 /* Teatime */ = {
 			isa = PBXGroup;
 			children = (
+				908BC1A61B3534E4000B8797 /* SwiftyJSON.swift */,
 				907B44B41B1FC8CA00841988 /* RecipeData.swift */,
+				905295431B32481D00523CBB /* TeaData.swift */,
 				907B44B21B1FA79400841988 /* TeaListTableTableViewController.swift */,
 				907B44B61B1FD64300841988 /* TeaListTableViewCell.swift */,
 				90BA13601B30766A001636AA /* StepStoneViewController.swift */,
@@ -226,6 +232,8 @@
 				907B44B51B1FC8CA00841988 /* RecipeData.swift in Sources */,
 				907B44B71B1FD64300841988 /* TeaListTableViewCell.swift in Sources */,
 				907B44B31B1FA79400841988 /* TeaListTableTableViewController.swift in Sources */,
+				905295441B32481D00523CBB /* TeaData.swift in Sources */,
+				908BC1A71B3534E4000B8797 /* SwiftyJSON.swift in Sources */,
 				900201DE1B30354F00FCCC0F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

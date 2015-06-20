@@ -9,16 +9,25 @@
 import UIKit
 
 class StepStoneViewController: UIViewController {
-    
-    var timerCount = 0
-    var timerRunning = false
-    var timer = NSTimer()
 
     @IBOutlet var stepNameLabel: UILabel!
     @IBOutlet var stepTimerLabel: UILabel!
     
+    var tea: JSON!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let teaName = tea["name"].string!
+        stepNameLabel.text = teaName
+    }
+    
+    var timerCount = 200
+    var timerRunning = false
+    var timer = NSTimer()
+    
+    
     func counting(){
-        timerCount += 1
+        timerCount -= 1
         stepTimerLabel.text = "\(timerCount)"
     }
     func stopTimer() {
@@ -27,10 +36,13 @@ class StepStoneViewController: UIViewController {
             timerRunning == false
         }
     }
+    func secondsToMinutesSeconds (seconds : Int) -> (Int, Int) {
+        return ((seconds % 3600) / 60, (seconds % 3600) % 60)
+    }
     @IBAction func toggleTimerStart(sender: UIButton) {
         if timerRunning == false {
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("counting"), userInfo: nil, repeats: true)
-        timerRunning = true
+            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("counting"), userInfo: nil, repeats: true)
+            timerRunning = true
         } else {
             timer.invalidate()
             timerRunning = false
@@ -38,8 +50,8 @@ class StepStoneViewController: UIViewController {
 
     }
     @IBAction func restartTimer(sender: UIButton) {
-        timerCount = 0
-        stepTimerLabel.text = "0"
+        timerCount = 200
+        stepTimerLabel.text = "200"
         stopTimer()
     }
 
