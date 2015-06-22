@@ -19,20 +19,13 @@ class StepStoneViewController: UIViewController {
     var timer = NSTimer()
     
     //// Color Declarations
-    let timerCircle = UIColor(red: 0.020, green: 0.024, blue: 0.031, alpha: 1.000)
+    //let timerCircle = UIColor(red: 0.020, green: 0.024, blue: 0.031, alpha: 1.000)
     
     //// Oval Drawing
     //var ovalPath = UIBezierPath(ovalInRect: CGRectMake(76, 19, 150, 150))
     //timerCircle.setStroke()
     //ovalPath.lineWidth = 10
     //ovalPath.stroke()
-    
-    let path = UIBezierPath()
-    path.moveToPoint(CGPoint(80, 50))
-    path.addLineToPoint(CGPoint(89, 150))
-    path.addLineToPoint(CGPoint(10, 150))
-    
-    path.linewidth = 10.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
