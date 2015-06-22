@@ -89,6 +89,8 @@
 		907B448F1B1F3A6B00841988 /* Teatime */ = {
 			isa = PBXGroup;
 			children = (
+				900201DD1B30354F00FCCC0F /* AppDelegate.swift */,
+				907B449B1B1F3A6B00841988 /* LaunchScreen.xib */,
 				908BC1A61B3534E4000B8797 /* SwiftyJSON.swift */,
 				907B44B41B1FC8CA00841988 /* RecipeData.swift */,
 				90EE391B1B37627C00A7B5F3 /* Stopwatdh.swift */,
@@ -106,8 +108,6 @@
 		907B44901B1F3A6B00841988 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				900201DD1B30354F00FCCC0F /* AppDelegate.swift */,
-				907B449B1B1F3A6B00841988 /* LaunchScreen.xib */,
 				907B44911B1F3A6B00841988 /* Info.plist */,
 			);
 			name = "Supporting Files";
