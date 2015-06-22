@@ -12,18 +12,20 @@ class StepStoneViewController: UIViewController {
 
     @IBOutlet var stepNameLabel: UILabel!
     @IBOutlet var stepTimerLabel: UILabel!
-    
     var tea: JSON!
+    var timerCount =  200
+    var timerRunning = false
+    var timer = NSTimer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let teaName = tea["name"].string!
+        var stepDuration = tea["steps"][0]["duration"].int!
         stepNameLabel.text = teaName
+        timerCount = stepDuration
+        stepTimerLabel.text = "\(timerCount)"
     }
-    
-    var timerCount = 200
-    var timerRunning = false
-    var timer = NSTimer()
     
     
     func counting(){
@@ -39,6 +41,8 @@ class StepStoneViewController: UIViewController {
     func secondsToMinutesSeconds (seconds : Int) -> (Int, Int) {
         return ((seconds % 3600) / 60, (seconds % 3600) % 60)
     }
+    
+    
     @IBAction func toggleTimerStart(sender: UIButton) {
         if timerRunning == false {
             timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("counting"), userInfo: nil, repeats: true)

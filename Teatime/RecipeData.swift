@@ -26,31 +26,31 @@ let RecipeData: JSON = [
             [
                 "stepName": "Add Tea Leaves",
                 "instructions": "Add 1tsp of tea",
-                "duration": "300",
+                "duration": 300,
                 "id": "1001"
             ],
             [
                 "stepName": "Pour Water",
                 "instructions": "Pour water into brewer and lid",
-                "duration": "300",
+                "duration": 300,
                 "id": "1002"
             ],
             [
                 "stepName": "Boil Water",
                 "instructions": "Bring the water to 200F",
-                "duration": "500",
+                "duration": 500,
                 "id": "1003"
             ],
             [
                 "stepName": "Let Steep",
                 "instructions": "Give the tea sometime to steep properly",
-                "duration": "900",
+                "duration": 900,
                 "id": "1004"
             ],
             [
                 "stepName": "Pour Tea",
                 "instructions": "Make sure to decant excess liquid to prevent tea from over steeping.",
-                "duration": "10",
+                "duration": 10,
                 "id": "1005"
             ]
         ],
@@ -66,31 +66,31 @@ let RecipeData: JSON = [
             [
                 "stepName": "Slowly Add Tea Leaves",
                 "instructions": "Add 1tsp of tea",
-                "duration": "59",
+                "duration": 59,
                 "id": "1001"
             ],
             [
                 "stepName": "Pour Water",
                 "instructions": "Pour water into brewer and lid",
-                "duration": "300",
+                "duration": 300,
                 "id": "1002"
             ],
             [
                 "stepName": "Boil Water",
                 "instructions": "Bring the water to 200F",
-                "duration": "500",
+                "duration": 500,
                 "id": "1003"
             ],
             [
                 "stepName": "Let Steep",
                 "instructions": "Give the tea sometime to steep properly",
-                "duration": "900",
+                "duration": 900,
                 "id": "1004"
             ],
             [
                 "stepName": "Pour Tea",
                 "instructions": "Make sure to decant excess liquid to prevent tea from over steeping.",
-                "duration": "10",
+                "duration": 10,
                 "id": "1005"
             ]
         ],
