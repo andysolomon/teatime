@@ -25,7 +25,6 @@ class CircleView: UIView {
         let circlePath = UIBezierPath(arcCenter: circleCenter, radius: circleRadius, startAngle: -90 * CGFloat(M_PI)/180, endAngle: 3.6 * CGFloat(M_PI)/180, clockwise: true)
         circlePath.lineWidth = lineWidth
         color.set()
-
         circlePath.stroke()
     }
 }
