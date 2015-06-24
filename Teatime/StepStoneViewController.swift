@@ -64,8 +64,8 @@ class StepStoneViewController: UIViewController {
 
     }
     @IBAction func restartTimer(sender: UIButton) {
-        timerCount = 200
-        stepTimerLabel.text = "200"
+        timerCount = tea["steps"][0]["duration"].int!
+        stepTimerLabel.text = "\(timerCount)"
         stopTimer()
     }
 
