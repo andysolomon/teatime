@@ -37,10 +37,23 @@ class StepStoneViewController: UIViewController {
         stepTimerLabel.text = "\(timerCount)"
     }
     
+    func timePassed() -> Int {
+        return timerCount
+    }
     
     func counting(){
         timerCount -= 1
         stepTimerLabel.text = "\(timerCount)"
+        var totalDuration = tea["steps"][0]["duration"].int!
+        var elapsedTime = totalDuration - timerCount
+        var percentageOfTime = elapsedTime / totalDuration
+        var realPercentage = Float(elapsedTime) / Float(totalDuration)
+        print(realPercentage * 100 * 3.6)
+
+        if timerCount == 0 {
+            timer.invalidate()
+            timerRunning = false
+        }
     }
     func stopTimer() {
         if timerRunning == true {
