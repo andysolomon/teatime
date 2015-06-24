@@ -66,19 +66,19 @@ let RecipeData: JSON = [
             [
                 "stepName": "Slowly Add Tea Leaves",
                 "instructions": "Add 1tsp of tea",
-                "duration": 59,
+                "duration": 20,
                 "id": "1001"
             ],
             [
                 "stepName": "Pour Water",
                 "instructions": "Pour water into brewer and lid",
-                "duration": 300,
+                "duration": 10,
                 "id": "1002"
             ],
             [
                 "stepName": "Boil Water",
                 "instructions": "Bring the water to 200F",
-                "duration": 500,
+                "duration": 8,
                 "id": "1003"
             ],
             [
