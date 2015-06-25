@@ -101,6 +101,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJt-NY-tTP" customClass="CircleView" customModule="Teatime" customModuleProvider="target">
+                                <rect key="frame" x="210" y="210" width="180" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="MbJ-ov-VE6"/>
+                                    <constraint firstAttribute="height" constant="180" id="pFz-FG-MMs"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boba Guys Blend No. 1" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m9S-pj-lQk">
                                 <rect key="frame" x="101" y="74" width="398.5" height="41.5"/>
                                 <constraints>
@@ -153,19 +161,41 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pLg-e4-NNn" firstAttribute="top" secondItem="632-EH-PKo" secondAttribute="bottom" id="7Lz-0b-D7i"/>
+                            <constraint firstItem="RJt-NY-tTP" firstAttribute="leading" secondItem="0Q9-fa-oaU" secondAttribute="leading" constant="250" id="95u-wh-NU3"/>
+                            <constraint firstItem="RJt-NY-tTP" firstAttribute="centerY" secondItem="fvP-yR-tOf" secondAttribute="centerY" id="9J3-k2-vC5"/>
                             <constraint firstItem="pLg-e4-NNn" firstAttribute="top" secondItem="QuE-dj-U9B" secondAttribute="bottom" constant="100" id="FnM-fy-8m7"/>
                             <constraint firstItem="632-EH-PKo" firstAttribute="leading" secondItem="0Q9-fa-oaU" secondAttribute="leading" constant="8" id="Gpl-Ej-3sC"/>
+                            <constraint firstAttribute="centerX" secondItem="RJt-NY-tTP" secondAttribute="centerX" constant="-0.5" id="H3J-EH-4FW"/>
+                            <constraint firstItem="RJt-NY-tTP" firstAttribute="centerX" secondItem="fvP-yR-tOf" secondAttribute="centerX" id="KaF-4A-ccC"/>
                             <constraint firstItem="m9S-pj-lQk" firstAttribute="centerX" secondItem="0Q9-fa-oaU" secondAttribute="centerX" id="Kfn-Ha-JRj"/>
+                            <constraint firstAttribute="centerX" secondItem="RJt-NY-tTP" secondAttribute="centerX" id="LsJ-Co-Ti3"/>
                             <constraint firstItem="fvP-yR-tOf" firstAttribute="centerY" secondItem="0Q9-fa-oaU" secondAttribute="centerY" id="PXe-x2-Vi0"/>
+                            <constraint firstAttribute="centerX" secondItem="RJt-NY-tTP" secondAttribute="centerX" id="RbI-M8-MOZ"/>
+                            <constraint firstItem="RJt-NY-tTP" firstAttribute="leading" secondItem="0Q9-fa-oaU" secondAttribute="leading" constant="250" id="Wak-KJ-lGH"/>
                             <constraint firstItem="m9S-pj-lQk" firstAttribute="top" secondItem="wCt-tK-feX" secondAttribute="bottom" constant="10" id="Wi0-gf-Yd0"/>
                             <constraint firstItem="QuE-dj-U9B" firstAttribute="centerX" secondItem="0Q9-fa-oaU" secondAttribute="centerX" id="baU-ei-oh0"/>
+                            <constraint firstItem="RJt-NY-tTP" firstAttribute="top" secondItem="0Q9-fa-oaU" secondAttribute="top" constant="250" id="d8J-de-IjD"/>
                             <constraint firstItem="pLg-e4-NNn" firstAttribute="top" secondItem="t2Q-v3-zzh" secondAttribute="bottom" constant="6" id="guS-OW-6aw"/>
+                            <constraint firstAttribute="centerY" secondItem="RJt-NY-tTP" secondAttribute="centerY" constant="0.5" id="jMN-s4-bxK"/>
                             <constraint firstItem="QuE-dj-U9B" firstAttribute="centerY" secondItem="0Q9-fa-oaU" secondAttribute="centerY" id="oDj-Ge-vhx"/>
+                            <constraint firstAttribute="centerY" secondItem="RJt-NY-tTP" secondAttribute="centerY" id="p1V-0B-yRJ"/>
                             <constraint firstAttribute="trailing" secondItem="t2Q-v3-zzh" secondAttribute="trailing" constant="8" id="q8u-3e-Bpp"/>
+                            <constraint firstItem="RJt-NY-tTP" firstAttribute="centerY" secondItem="fvP-yR-tOf" secondAttribute="centerY" id="rXl-SD-0L7"/>
+                            <constraint firstItem="RJt-NY-tTP" firstAttribute="top" secondItem="0Q9-fa-oaU" secondAttribute="top" constant="250" id="trn-Hq-cUc"/>
                             <constraint firstItem="fvP-yR-tOf" firstAttribute="centerX" secondItem="0Q9-fa-oaU" secondAttribute="centerX" id="xBl-Ic-ith"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="95u-wh-NU3"/>
+                                <exclude reference="9J3-k2-vC5"/>
+                                <exclude reference="H3J-EH-4FW"/>
+                                <exclude reference="KaF-4A-ccC"/>
+                                <exclude reference="RbI-M8-MOZ"/>
+                                <exclude reference="Wak-KJ-lGH"/>
+                                <exclude reference="d8J-de-IjD"/>
+                                <exclude reference="jMN-s4-bxK"/>
+                                <exclude reference="rXl-SD-0L7"/>
+                                <exclude reference="trn-Hq-cUc"/>
                                 <exclude reference="oDj-Ge-vhx"/>
                             </mask>
                         </variation>

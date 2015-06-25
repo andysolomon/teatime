@@ -16,7 +16,6 @@ class TeaListTableTableViewController: UITableViewController, TeaListTableViewCe
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        
         let dequeued: AnyObject = tableView.dequeueReusableCellWithIdentifier("TeaCell", forIndexPath: indexPath)
         let cell = dequeued as! TeaListTableViewCell
         let tea = RecipeData[indexPath.row]
