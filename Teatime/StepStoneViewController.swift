@@ -12,6 +12,8 @@ class StepStoneViewController: UIViewController {
 
     @IBOutlet var stepNameLabel: UILabel!
     @IBOutlet var stepTimerLabel: UILabel!
+    @IBOutlet var nextStepNameLabel: UILabel!
+    @IBOutlet var stepInstructions: UILabel!
     
     var number = 0
     var tea: JSON!
@@ -23,10 +25,17 @@ class StepStoneViewController: UIViewController {
         super.viewDidLoad()
         let teaName = tea["steps"][number]["stepName"].string!
         var stepDuration = tea["steps"][number]["duration"].int!
+        var nextStep = tea["steps"][number + 1]["stepName"].string!
+        var instructions = tea["steps"][number]["instructions"].string!
         stepNameLabel.text = teaName
+        if timerCount < 1 {
+            isFirstStep()
+        }
         timerCount = stepDuration
         stepTimerLabel.text = "\(timerCount)"
-        isFirstStep()
+        nextStepNameLabel.text = nextStep
+        stepInstructions.text = instructions
+        
     }
     
     func timePassed() -> Int {
@@ -36,16 +45,21 @@ class StepStoneViewController: UIViewController {
         timerCount -= 1
         stepTimerLabel.text = "\(timerCount)"
         determinePercentage()
-        moveToNextStep()
-
+        if timerCount == 0 {
+            moveToNextStep()
+        }
     }
     func moveToNextStep() {
-        if timerCount == 0 {
-            timer.invalidate()
-            timerRunning = false
-            number++
-            viewDidLoad()
-        }
+        timer.invalidate()
+        timerRunning = false
+        number++
+        viewDidLoad()
+    }
+    func moveToPrevStep() {
+        timer.invalidate()
+        timerRunning = false
+        number--
+        viewDidLoad()
     }
     func determinePercentage() {
         var totalDuration = tea["steps"][number]["duration"].int!
@@ -85,6 +99,19 @@ class StepStoneViewController: UIViewController {
         timerCount = tea["steps"][number]["duration"].int!
         stepTimerLabel.text = "\(timerCount)"
         stopTimer()
+    }
+    @IBAction func prevButton(sender: UIButton) {
+        if number > 0 {
+            stopTimer()
+            moveToPrevStep()
+        }
+    }
+    @IBAction func nextButton(sender: UIButton) {
+        stopTimer()
+        timerCount = tea["steps"][number]["duration"].int!
+        stepTimerLabel.text = "\(timerCount)"
+        timerCount = 0
+        moveToNextStep()
     }
 
 }

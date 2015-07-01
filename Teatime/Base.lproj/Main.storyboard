@@ -10,6 +10,7 @@
             <string>Helvetica-Bold</string>
             <string>Helvetica-Bold</string>
             <string>Helvetica-Bold</string>
+            <string>Helvetica-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -101,11 +102,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJt-NY-tTP" customClass="CircleView" customModule="Teatime" customModuleProvider="target">
-                                <rect key="frame" x="217" y="333" width="167" height="167"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RJt-NY-tTP" customClass="CircleView" customModule="Teatime" customModuleProvider="target">
+                                <rect key="frame" x="217" y="250" width="167" height="250"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvP-yR-tOf">
-                                        <rect key="frame" x="43" y="55" width="80.5" height="55.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvP-yR-tOf">
+                                        <rect key="frame" x="43" y="97" width="81" height="56"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="48"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -119,7 +120,7 @@
                                     <constraint firstAttribute="centerX" secondItem="fvP-yR-tOf" secondAttribute="centerX" constant="0.25" id="ny2-sm-lxH"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boba Guys Blend No. 1" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m9S-pj-lQk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Boba Guys Blend No. 1" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m9S-pj-lQk">
                                 <rect key="frame" x="101" y="74" width="398.5" height="41.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="J5G-kM-prn"/>
@@ -155,7 +156,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuE-dj-U9B">
-                                <rect key="frame" x="225" y="342" width="150" height="150"/>
+                                <rect key="frame" x="225" y="300" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="bxp-bg-rz2"/>
                                     <constraint firstAttribute="width" constant="150" id="lfG-KB-QTS"/>
@@ -164,13 +165,56 @@
                                     <action selector="toggleTimerStart:" destination="sPP-lV-9zW" eventType="touchUpInside" id="2tF-e4-2ZZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boil Water" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DD9-j0-mtl">
+                                <rect key="frame" x="212" y="480" width="177" height="41.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" red="0.91324746608734131" green="0.92522531747817993" blue="0.94591468572616577" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="previous-step" translatesAutoresizingMaskIntoConstraints="NO" id="VJx-WZ-QBf">
+                                <rect key="frame" x="157" y="370" width="40" height="34"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="next-step" translatesAutoresizingMaskIntoConstraints="NO" id="GXc-Pu-rhB">
+                                <rect key="frame" x="404" y="370" width="40" height="34"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kh0-ON-BIT">
+                                <rect key="frame" x="167" y="370" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="prevButton:" destination="sPP-lV-9zW" eventType="touchUpInside" id="juq-Zl-sN6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfA-3y-0B6">
+                                <rect key="frame" x="404" y="370" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButton:" destination="sPP-lV-9zW" eventType="touchUpInside" id="2tH-f7-WvC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove the kettle from heat, and generously add tea leaves to the brewing pot." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CB1-f6-ecn">
+                                <rect key="frame" x="160.5" y="167" width="280" height="16.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Ppz-mj-rk5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="RJt-NY-tTP" secondAttribute="centerX" constant="-0.5" id="0Uq-Jx-QZs"/>
+                            <constraint firstItem="RJt-NY-tTP" firstAttribute="leading" secondItem="VJx-WZ-QBf" secondAttribute="trailing" constant="20" id="4gJ-bp-0jp"/>
                             <constraint firstItem="pLg-e4-NNn" firstAttribute="top" secondItem="632-EH-PKo" secondAttribute="bottom" id="7Lz-0b-D7i"/>
+                            <constraint firstItem="GXc-Pu-rhB" firstAttribute="leading" secondItem="RJt-NY-tTP" secondAttribute="trailing" constant="20" id="89y-xH-2rw"/>
+                            <constraint firstItem="pLg-e4-NNn" firstAttribute="top" secondItem="VJx-WZ-QBf" secondAttribute="bottom" constant="217" id="8mw-dY-CfT"/>
                             <constraint firstItem="RJt-NY-tTP" firstAttribute="leading" secondItem="0Q9-fa-oaU" secondAttribute="leading" constant="250" id="95u-wh-NU3"/>
                             <constraint firstItem="QuE-dj-U9B" firstAttribute="top" secondItem="RJt-NY-tTP" secondAttribute="bottom" constant="100" id="DtO-9g-IhL"/>
+                            <constraint firstItem="kfA-3y-0B6" firstAttribute="leading" secondItem="RJt-NY-tTP" secondAttribute="trailing" constant="20" id="ETd-aj-3ky"/>
                             <constraint firstItem="pLg-e4-NNn" firstAttribute="top" secondItem="QuE-dj-U9B" secondAttribute="bottom" constant="100" id="FnM-fy-8m7"/>
                             <constraint firstItem="632-EH-PKo" firstAttribute="leading" secondItem="0Q9-fa-oaU" secondAttribute="leading" constant="8" id="Gpl-Ej-3sC"/>
                             <constraint firstAttribute="centerX" secondItem="RJt-NY-tTP" secondAttribute="centerX" constant="-0.5" id="H3J-EH-4FW"/>
@@ -179,17 +223,29 @@
                             <constraint firstItem="QuE-dj-U9B" firstAttribute="centerX" secondItem="RJt-NY-tTP" secondAttribute="centerX" constant="-0.5" id="OTV-bw-ZTL"/>
                             <constraint firstItem="QuE-dj-U9B" firstAttribute="centerY" secondItem="RJt-NY-tTP" secondAttribute="centerY" id="Pqw-8B-b90"/>
                             <constraint firstAttribute="centerX" secondItem="RJt-NY-tTP" secondAttribute="centerX" id="RbI-M8-MOZ"/>
+                            <constraint firstItem="pLg-e4-NNn" firstAttribute="top" secondItem="QuE-dj-U9B" secondAttribute="bottom" constant="150" id="Rt9-2z-KRh"/>
+                            <constraint firstItem="Kh0-ON-BIT" firstAttribute="centerY" secondItem="QuE-dj-U9B" secondAttribute="centerY" constant="10" id="TkR-CO-MW8"/>
+                            <constraint firstItem="RJt-NY-tTP" firstAttribute="leading" secondItem="Kh0-ON-BIT" secondAttribute="trailing" constant="20" id="U5g-7E-i4x"/>
+                            <constraint firstItem="QuE-dj-U9B" firstAttribute="centerY" secondItem="kfA-3y-0B6" secondAttribute="centerY" constant="-10" id="WK2-Fl-R6K"/>
                             <constraint firstItem="RJt-NY-tTP" firstAttribute="leading" secondItem="0Q9-fa-oaU" secondAttribute="leading" constant="250" id="Wak-KJ-lGH"/>
                             <constraint firstItem="m9S-pj-lQk" firstAttribute="top" secondItem="wCt-tK-feX" secondAttribute="bottom" constant="10" id="Wi0-gf-Yd0"/>
                             <constraint firstItem="QuE-dj-U9B" firstAttribute="centerX" secondItem="0Q9-fa-oaU" secondAttribute="centerX" id="baU-ei-oh0"/>
                             <constraint firstItem="RJt-NY-tTP" firstAttribute="top" secondItem="0Q9-fa-oaU" secondAttribute="top" constant="250" id="d8J-de-IjD"/>
+                            <constraint firstItem="pLg-e4-NNn" firstAttribute="top" secondItem="DD9-j0-mtl" secondAttribute="bottom" constant="78" id="dcb-bJ-jkn"/>
                             <constraint firstItem="QuE-dj-U9B" firstAttribute="top" secondItem="RJt-NY-tTP" secondAttribute="bottom" constant="150" id="f1J-aH-KCu"/>
                             <constraint firstItem="pLg-e4-NNn" firstAttribute="top" secondItem="t2Q-v3-zzh" secondAttribute="bottom" constant="6" id="guS-OW-6aw"/>
                             <constraint firstAttribute="centerY" secondItem="RJt-NY-tTP" secondAttribute="centerY" constant="0.5" id="jMN-s4-bxK"/>
+                            <constraint firstItem="CB1-f6-ecn" firstAttribute="top" secondItem="m9S-pj-lQk" secondAttribute="bottom" constant="10" id="mgv-3o-dpJ"/>
+                            <constraint firstItem="GXc-Pu-rhB" firstAttribute="centerY" secondItem="QuE-dj-U9B" secondAttribute="centerY" constant="12" id="niq-oc-0WB"/>
                             <constraint firstItem="QuE-dj-U9B" firstAttribute="centerY" secondItem="0Q9-fa-oaU" secondAttribute="centerY" id="oDj-Ge-vhx"/>
+                            <constraint firstAttribute="centerX" secondItem="DD9-j0-mtl" secondAttribute="centerX" constant="-0.5" id="owq-cH-yyw"/>
                             <constraint firstAttribute="centerY" secondItem="RJt-NY-tTP" secondAttribute="centerY" id="p1V-0B-yRJ"/>
                             <constraint firstAttribute="trailing" secondItem="t2Q-v3-zzh" secondAttribute="trailing" constant="8" id="q8u-3e-Bpp"/>
+                            <constraint firstItem="GXc-Pu-rhB" firstAttribute="centerY" secondItem="QuE-dj-U9B" secondAttribute="centerY" constant="12" id="rLx-fC-Vnh"/>
                             <constraint firstItem="RJt-NY-tTP" firstAttribute="top" secondItem="0Q9-fa-oaU" secondAttribute="top" constant="250" id="trn-Hq-cUc"/>
+                            <constraint firstItem="VJx-WZ-QBf" firstAttribute="centerY" secondItem="QuE-dj-U9B" secondAttribute="centerY" constant="12" id="uMJ-SP-y8z"/>
+                            <constraint firstItem="CB1-f6-ecn" firstAttribute="width" secondItem="m9S-pj-lQk" secondAttribute="width" id="vGe-dI-fnE"/>
+                            <constraint firstAttribute="centerX" secondItem="CB1-f6-ecn" secondAttribute="centerX" constant="-0.25" id="yMz-kF-sGo"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -204,12 +260,17 @@
                                 <exclude reference="DtO-9g-IhL"/>
                                 <exclude reference="f1J-aH-KCu"/>
                                 <exclude reference="oDj-Ge-vhx"/>
+                                <exclude reference="niq-oc-0WB"/>
+                                <exclude reference="8mw-dY-CfT"/>
                                 <exclude reference="FnM-fy-8m7"/>
+                                <exclude reference="MXh-Ae-OwO"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="2ih-DW-HlY"/>
                     <connections>
+                        <outlet property="nextStepNameLabel" destination="DD9-j0-mtl" id="j4c-g2-IBK"/>
+                        <outlet property="stepInstructions" destination="CB1-f6-ecn" id="MFR-nC-2ki"/>
                         <outlet property="stepNameLabel" destination="m9S-pj-lQk" id="VeA-9H-JKc"/>
                         <outlet property="stepTimerLabel" destination="fvP-yR-tOf" id="pGS-5v-Xb0"/>
                     </connections>
@@ -244,5 +305,7 @@
     </scenes>
     <resources>
         <image name="add" width="20" height="20"/>
+        <image name="next-step" width="40" height="34"/>
+        <image name="previous-step" width="40" height="34"/>
     </resources>
 </document>
