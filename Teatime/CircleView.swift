@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import QuartzCore
+
+protocol CircleViewDataSource: class {
+    func progressForCircleView(sender: CircleView) -> Double?
+    func isTimerRunning(sender: CircleView) -> Bool?
+}
 
 @IBDesignable
 class CircleView: UIView {
+    @IBInspectable
     var lineWidth: CGFloat = 10 { didSet{ setNeedsDisplay()}}
+    @IBInspectable
     var color: UIColor = UIColor.blueColor() {didSet {setNeedsDisplay()}}
+    @IBInspectable
     var scale: CGFloat = 0.90 { didSet{ setNeedsDisplay()}}
     
     var circleCenter: CGPoint{
@@ -21,10 +30,19 @@ class CircleView: UIView {
         return min(bounds.size.width, bounds.size.height) / 2 * scale
     }
     
+    weak var dataSource: CircleViewDataSource?
+    
+    
     override func drawRect(rect: CGRect) {
-        let circlePath = UIBezierPath(arcCenter: circleCenter, radius: circleRadius, startAngle: -90 * CGFloat(M_PI)/180, endAngle: 360.6 * CGFloat(M_PI)/180, clockwise: true)
-        circlePath.lineWidth = lineWidth
+        let isTimeLeft: Bool = dataSource?.isTimerRunning(self) ?? true
+        var progress: Double = (dataSource?.progressForCircleView(self))! {
+            didSet { setNeedsDisplay() }
+        }
+        
+        let facePath = UIBezierPath(arcCenter: circleCenter, radius: circleRadius, startAngle: 0 * CGFloat(M_PI)/180, endAngle: CGFloat(progress) * CGFloat(M_PI)/180, clockwise: true)
+        
+        facePath.lineWidth = lineWidth
         color.set()
-        circlePath.stroke()
+        facePath.stroke()
     }
 }

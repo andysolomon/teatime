@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E36b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pzl-Wb-uZh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="15A243d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pzl-Wb-uZh">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Helvetica.ttc">
@@ -10,6 +11,7 @@
             <string>Helvetica-Bold</string>
             <string>Helvetica-Bold</string>
             <string>Helvetica-Bold</string>
+            <string>Helvetica</string>
             <string>Helvetica-Bold</string>
         </mutableArray>
     </customFonts>
@@ -21,6 +23,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rSJ-6U-dHY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TeaCell" rowHeight="44" id="3U4-Og-O17" customClass="TeaListTableViewCell" customModule="Teatime" customModuleProvider="target">
@@ -32,6 +35,7 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y2y-Oq-8q5">
                                             <rect key="frame" x="8" y="10" width="24" height="24"/>
+                                            <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="24" id="Oy3-ko-qJ7"/>
                                                 <constraint firstAttribute="height" constant="24" id="XeY-9A-6e3"/>
@@ -39,18 +43,21 @@
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16K-rh-Hbz">
                                             <rect key="frame" x="48" y="13" width="479" height="20"/>
+                                            <animations/>
                                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzJ-mP-P7o">
                                             <rect key="frame" x="186" y="5" width="46" height="30"/>
+                                            <animations/>
                                             <state key="normal" title="Button"/>
                                             <connections>
                                                 <action selector="teaCellDidTouch:" destination="3U4-Og-O17" eventType="touchUpInside" id="TFc-QS-D7z"/>
                                             </connections>
                                         </button>
                                     </subviews>
+                                    <animations/>
                                     <constraints>
                                         <constraint firstItem="y2y-Oq-8q5" firstAttribute="top" secondItem="Ohi-bN-Lsg" secondAttribute="top" constant="10" id="A6r-Gv-KQF"/>
                                         <constraint firstAttribute="trailing" secondItem="16K-rh-Hbz" secondAttribute="trailing" constant="40" id="HiS-O0-5ov"/>
@@ -67,6 +74,7 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <animations/>
                                 <connections>
                                     <outlet property="teaLabel" destination="16K-rh-Hbz" id="uQS-qz-5io"/>
                                     <outlet property="teaTypeIcon" destination="y2y-Oq-8q5" id="AzZ-PY-c7e"/>
@@ -102,26 +110,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RJt-NY-tTP" customClass="CircleView" customModule="Teatime" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJt-NY-tTP" customClass="CircleView" customModule="Teatime" customModuleProvider="target">
                                 <rect key="frame" x="217" y="250" width="167" height="250"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvP-yR-tOf">
-                                        <rect key="frame" x="43" y="97" width="81" height="56"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="48"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="167" id="KHy-6r-USh"/>
                                     <constraint firstAttribute="width" constant="167" id="lcY-js-UZ6"/>
-                                    <constraint firstAttribute="centerY" secondItem="fvP-yR-tOf" secondAttribute="centerY" constant="0.75" id="mCR-dK-diQ"/>
-                                    <constraint firstAttribute="centerX" secondItem="fvP-yR-tOf" secondAttribute="centerX" constant="0.25" id="ny2-sm-lxH"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Boba Guys Blend No. 1" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m9S-pj-lQk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvP-yR-tOf">
+                                <rect key="frame" x="259" y="272" width="81" height="56"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="48"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boba Guys Blend No. 1" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m9S-pj-lQk">
                                 <rect key="frame" x="101" y="74" width="398.5" height="41.5"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="J5G-kM-prn"/>
                                 </constraints>
@@ -141,6 +148,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="632-EH-PKo">
                                 <rect key="frame" x="8" y="571" width="49" height="29"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                 <state key="normal" title="Restart">
                                     <color key="titleColor" red="0.019474377855658531" green="0.023402698338031769" blue="0.031733173877000809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -151,12 +159,14 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2Q-v3-zzh">
                                 <rect key="frame" x="563" y="577" width="28.5" height="16.5"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuE-dj-U9B">
                                 <rect key="frame" x="225" y="300" width="150" height="150"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="bxp-bg-rz2"/>
                                     <constraint firstAttribute="width" constant="150" id="lfG-KB-QTS"/>
@@ -167,18 +177,22 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boil Water" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DD9-j0-mtl">
                                 <rect key="frame" x="212" y="480" width="177" height="41.5"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" red="0.91324746608734131" green="0.92522531747817993" blue="0.94591468572616577" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="previous-step" translatesAutoresizingMaskIntoConstraints="NO" id="VJx-WZ-QBf">
                                 <rect key="frame" x="157" y="370" width="40" height="34"/>
+                                <animations/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="next-step" translatesAutoresizingMaskIntoConstraints="NO" id="GXc-Pu-rhB">
                                 <rect key="frame" x="404" y="370" width="40" height="34"/>
+                                <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kh0-ON-BIT">
                                 <rect key="frame" x="167" y="370" width="30" height="30"/>
+                                <animations/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -188,6 +202,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfA-3y-0B6">
                                 <rect key="frame" x="404" y="370" width="30" height="30"/>
+                                <animations/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -196,15 +211,17 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove the kettle from heat, and generously add tea leaves to the brewing pot." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CB1-f6-ecn">
-                                <rect key="frame" x="160.5" y="167" width="280" height="16.5"/>
+                                <rect key="frame" x="53" y="167" width="494" height="16.5"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="Ppz-mj-rk5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="RJt-NY-tTP" secondAttribute="centerX" constant="-0.5" id="0Uq-Jx-QZs"/>
@@ -244,7 +261,9 @@
                             <constraint firstItem="GXc-Pu-rhB" firstAttribute="centerY" secondItem="QuE-dj-U9B" secondAttribute="centerY" constant="12" id="rLx-fC-Vnh"/>
                             <constraint firstItem="RJt-NY-tTP" firstAttribute="top" secondItem="0Q9-fa-oaU" secondAttribute="top" constant="250" id="trn-Hq-cUc"/>
                             <constraint firstItem="VJx-WZ-QBf" firstAttribute="centerY" secondItem="QuE-dj-U9B" secondAttribute="centerY" constant="12" id="uMJ-SP-y8z"/>
+                            <constraint firstItem="fvP-yR-tOf" firstAttribute="centerX" secondItem="RJt-NY-tTP" secondAttribute="centerX" id="vCW-IT-1OM"/>
                             <constraint firstItem="CB1-f6-ecn" firstAttribute="width" secondItem="m9S-pj-lQk" secondAttribute="width" id="vGe-dI-fnE"/>
+                            <constraint firstItem="fvP-yR-tOf" firstAttribute="centerY" secondItem="RJt-NY-tTP" secondAttribute="centerY" id="xI1-yE-fKF"/>
                             <constraint firstAttribute="centerX" secondItem="CB1-f6-ecn" secondAttribute="centerX" constant="-0.25" id="yMz-kF-sGo"/>
                         </constraints>
                         <variation key="default">
@@ -269,6 +288,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="2ih-DW-HlY"/>
                     <connections>
+                        <outlet property="circleView" destination="RJt-NY-tTP" id="YxY-p0-qMq"/>
                         <outlet property="nextStepNameLabel" destination="DD9-j0-mtl" id="j4c-g2-IBK"/>
                         <outlet property="stepInstructions" destination="CB1-f6-ecn" id="MFR-nC-2ki"/>
                         <outlet property="stepNameLabel" destination="m9S-pj-lQk" id="VeA-9H-JKc"/>
@@ -277,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9b-qY-6LP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1675" y="496"/>
+            <point key="canvasLocation" x="1670" y="420"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KM3-sg-9Vb">
@@ -287,6 +307,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="L3o-c9-Ewp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                         <color key="barTintColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>

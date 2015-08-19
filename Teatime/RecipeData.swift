@@ -84,7 +84,7 @@ let RecipeData: JSON = [
             [
                 "stepName": "Let Steep",
                 "instructions": "Give the tea sometime to steep properly",
-                "duration": 900,
+                "duration": 30,
                 "id": "1004"
             ],
             [

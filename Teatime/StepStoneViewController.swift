@@ -8,83 +8,98 @@
 
 import UIKit
 
-class StepStoneViewController: UIViewController {
+class StepStoneViewController: UIViewController, CircleViewDataSource {
 
+    let transformRotate: CGAffineTransform = CGAffineTransformMakeRotation(-90 * CGFloat(M_PI) / 180)
     @IBOutlet var stepNameLabel: UILabel!
     @IBOutlet var stepTimerLabel: UILabel!
     @IBOutlet var nextStepNameLabel: UILabel!
     @IBOutlet var stepInstructions: UILabel!
+    @IBOutlet weak var circleView: CircleView! {
+        didSet {
+            circleView.dataSource = self
+            circleView.transform = transformRotate
+        }
+    }
     
-    var number = 0
+    // Put these in an initializer
     var tea: JSON!
-    var timerCount =  200
+    var number = 0
+    var timerCount = 0
     var timerRunning = false
     var timer = NSTimer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+    
+    // Setup View
+    func setup() {
         let teaName = tea["steps"][number]["stepName"].string!
         var stepDuration = tea["steps"][number]["duration"].int!
         var nextStep = tea["steps"][number + 1]["stepName"].string!
         var instructions = tea["steps"][number]["instructions"].string!
+        timerCount = tea["steps"][number]["duration"].int!
         stepNameLabel.text = teaName
-        if timerCount < 1 {
-            isFirstStep()
-        }
-        timerCount = stepDuration
         stepTimerLabel.text = "\(timerCount)"
         nextStepNameLabel.text = nextStep
         stepInstructions.text = instructions
-        
     }
     
-    func timePassed() -> Int {
-        return timerCount
-    }
+    // Utility Functions
     func counting(){
-        timerCount -= 1
+        timerCount--
         stepTimerLabel.text = "\(timerCount)"
-        determinePercentage()
+        updateUI()
         if timerCount == 0 {
             moveToNextStep()
         }
     }
+    private func updateUI() {
+        circleView.setNeedsDisplay()
+        determinePercentage()
+    }
     func moveToNextStep() {
-        timer.invalidate()
-        timerRunning = false
+        timerRunning = true
         number++
-        viewDidLoad()
+        setup()
     }
     func moveToPrevStep() {
-        timer.invalidate()
-        timerRunning = false
+        timerRunning = true
         number--
-        viewDidLoad()
+        setup()
     }
-    func determinePercentage() {
+    func determinePercentage() -> Double {
         var totalDuration = tea["steps"][number]["duration"].int!
         var elapsedTime = totalDuration - timerCount
         var percentageOfTime = elapsedTime / totalDuration
         var realPercentage = Float(elapsedTime) / Float(totalDuration)
-        print(realPercentage * 100 * 3.6)
+        var percentage = realPercentage * 100 * 3.6
+        return Double(percentage)
     }
     func startTimer() {
         if timerRunning == false {
             timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("counting"), userInfo: nil, repeats: true)
             timerRunning = true
         } else {
-            timer.invalidate()
             timerRunning = false
+            if(timerRunning == false) {
+            }
+            pauseTimer()
+            timer.invalidate()
         }
+    }
+    func pauseTimer() {
+        print("pause timer")
+        updateUI()
     }
     func stopTimer() {
         if timerRunning == true {
             timer.invalidate()
-            timerRunning == false
+            timerRunning = false
+            updateUI()
         }
-    }
-    func secondsToMinutesSeconds (seconds : Int) -> (Int, Int) {
-        return ((seconds % 3600) / 60, (seconds % 3600) % 60)
     }
     func isFirstStep() {
         if number > 0 {
@@ -92,6 +107,7 @@ class StepStoneViewController: UIViewController {
         }
     }
 
+    // IBActions
     @IBAction func toggleTimerStart(sender: UIButton) {
         return startTimer()
     }
@@ -110,8 +126,15 @@ class StepStoneViewController: UIViewController {
         stopTimer()
         timerCount = tea["steps"][number]["duration"].int!
         stepTimerLabel.text = "\(timerCount)"
-        timerCount = 0
         moveToNextStep()
+    }
+    
+    // Delegate Methods
+    func isTimerRunning(sender: CircleView) -> Bool? {
+        return Bool(timerRunning)
+    }
+    func progressForCircleView(sender: CircleView) -> Double? {
+        return Double(determinePercentage())
     }
 
 }
