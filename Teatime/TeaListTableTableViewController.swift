@@ -8,21 +8,24 @@
 
 import UIKit
 
-class TeaListTableTableViewController: UITableViewController, TeaListTableViewCellDelegate {
+class TeaListTableTableViewController: UITableViewController{
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return RecipeData.count
     }
 
+    private struct Storyboard {
+        static let CellReuseIdentifier = "TeaCell"
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let dequeued: AnyObject = tableView.dequeueReusableCellWithIdentifier("TeaCell", forIndexPath: indexPath)
+        let dequeued: AnyObject = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIdentifier, forIndexPath: indexPath)
         let cell = dequeued as! TeaListTableViewCell
         let tea = RecipeData[indexPath.row]
         
         cell.configureWithTea(tea)
         
-        cell.delegate = self
         return cell
     }
     
@@ -38,10 +41,6 @@ class TeaListTableTableViewController: UITableViewController, TeaListTableViewCe
             let tea = RecipeData[indexPath.row]
             toView!.tea = tea
         }
-    }
-    // MARK: Misc
-    func teaListTableViewCellDidTouchTeaCell(cell: TeaListTableViewCell, sender: AnyObject) {
-        performSegueWithIdentifier("stepStoneSegue", sender: self)
     }
     
 }

@@ -57,7 +57,7 @@ class StepStoneViewController: UIViewController, CircleViewDataSource {
     }
     
     // Utility Functions
-    func counting(){
+    func counting(timer: NSTimer){
         timerCount--
         stepTimerLabel.text = "\(timerCount)"
         updateUI()
@@ -88,7 +88,13 @@ class StepStoneViewController: UIViewController, CircleViewDataSource {
     }
     func startTimer() {
         if timerRunning == false {
-            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("counting"), userInfo: nil, repeats: true)
+            timer = NSTimer.scheduledTimerWithTimeInterval(
+                1.0,
+                target: self,
+                selector: Selector("counting:"),
+                userInfo: nil,
+                repeats: true
+            )
             timerRunning = true
         } else {
             timerRunning = false

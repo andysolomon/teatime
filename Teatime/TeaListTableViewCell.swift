@@ -8,21 +8,13 @@
 
 import UIKit
 
-protocol TeaListTableViewCellDelegate: class {
-    func teaListTableViewCellDidTouchTeaCell (cell: TeaListTableViewCell, sender:AnyObject)
-}
-
 class TeaListTableViewCell: UITableViewCell {
 
     @IBOutlet var teaTypeIcon: UIImageView!
 
     @IBOutlet var teaLabel: UILabel!
   
-    weak var delegate: TeaListTableViewCellDelegate?
     
-    @IBAction func teaCellDidTouch(sender: UIButton) {
-        delegate?.teaListTableViewCellDidTouchTeaCell(self, sender: sender)
-    }
     func configureWithTea(tea: JSON) {
         let teaName = tea["name"].string!
         let teaIcon = getIconType(tea["type"].string!)
