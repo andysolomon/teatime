@@ -23,10 +23,10 @@ class StepStoneViewController: UIViewController, CircleViewDataSource {
     }
     
     // Put these in an initializer
-    var tea: JSON!
+    var tea: JSON
     private var number: Int
     private var timerCount: Int
-    private var timerRunning: Bool?
+    private var timerRunning: Bool = false
     private var timer: NSTimer
 
     required init?(coder aDecoder: NSCoder) {
@@ -46,10 +46,10 @@ class StepStoneViewController: UIViewController, CircleViewDataSource {
     
     // Setup View
     func setup() {
-        let teaName = tea["steps"][number]["stepName"].string!
-        let nextStep = tea["steps"][number + 1]["stepName"].string!
-        let instructions = tea["steps"][number]["instructions"].string!
-        self.timerCount = tea["steps"][number]["duration"].int!
+        let teaName = tea["steps"][number]["stepName"].stringValue
+        let nextStep = tea["steps"][number + 1]["stepName"].stringValue
+        let instructions = tea["steps"][number]["instructions"].stringValue
+        self.timerCount = tea["steps"][number]["duration"].intValue
         stepNameLabel.text = teaName
         stepTimerLabel.text = "\(timerCount)"
         nextStepNameLabel.text = nextStep
@@ -144,7 +144,7 @@ class StepStoneViewController: UIViewController, CircleViewDataSource {
     }
     
     // Delegate Methods
-    func isTimerRunning(sender: CircleView) -> Bool? {
+    func isTimerRunning(sender: CircleView) -> Bool {
         return timerRunning
     }
     func progressForCircleView(sender: CircleView) -> Double? {
